@@ -3,6 +3,7 @@ import GlobalStyle from './globalStyles.js';
 import Line from "./components/Line";
 import styled from "styled-components";
 
+
 const Title = styled.h1`
   text-align: center;
   color: white;
@@ -31,19 +32,24 @@ const BackgImg = styled.div`
   }
 `;
 
-function App() {
+
+function App () {
+     
   return (
+    
     <BackgImg>
       <GlobalStyle />
-      <div>
-        <Title>ROMEO &amp; JULIET</Title>
-      </div>
-      <div>
-        <Line />
-      </div>
+        <div>
+          <Title>ROMEO &amp; JULIET</Title> 
+        </div>
+
+        <div>
+          <Line />  
+        </div>
     
     </BackgImg>
   );
+
 }
 
 export default App;
