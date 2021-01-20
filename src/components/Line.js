@@ -71,7 +71,6 @@ function next () {
         quote = theatreText[currentLine++]  
           console.log(quote)
     }
-  
 }
 
 function previous () {
@@ -79,7 +78,6 @@ function previous () {
         quote = theatreText[currentLine--]  
      console.log(quote)
     }
-  
 }
 
 
@@ -91,7 +89,7 @@ function previous () {
             </ButtonTheatre>
             <ListStyle>
                 {/* Map - json file */}
-                {
+                {/* {
                     theatreText.map((text, i) => {
                         return(
                             <div key={i}>
@@ -99,21 +97,14 @@ function previous () {
                             </div>
                         )
                     }
-                )}
-
+                )} */}
                 <div >
-                    {/* <ListTheatre>{quote}</ListTheatre> */}
-                
-                </div>
-                        
-              
+                    <ListTheatre>{quote}</ListTheatre>
+                </div>  
             </ListStyle>
-
         </div>
-           )    
-           
+           )           
 }
-
 
 
 export default Line;
