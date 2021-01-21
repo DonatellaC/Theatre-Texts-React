@@ -4,16 +4,17 @@ import styled from "styled-components";
 
 
 // **** START - Styled components ****
+
 const ListStyle = styled.ul`
-list-style-type: none;
-padding: 10px 20px 30px 10px;
-margin-top: 20px;
-font-size: 1.5rem;
-letter-spacing: 1px;
-display: flex;
-align-items: center;
-flex-direction: column;
-text-align: justify;
+    list-style-type: none;
+    padding: 10px 20px 30px 10px;
+    margin-top: 20px;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: justify;
 
 
  @media (min-width: 768px) and (max-width: 820px){ 
@@ -23,7 +24,6 @@ text-align: justify;
  @media (min-width: 1024px) and (max-width: 1030px) { 
     font-size: 2.5rem;
   }
-
 `;
 
 const ListTheatre = styled.li`
@@ -32,13 +32,12 @@ const ListTheatre = styled.li`
   display: flex;
 `;
 
-
 const ButtonTheatre = styled.div`
- display: flex;
- align-items: center;
- flex-direction: row;
- justify-content: center;
- text-align: center;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
 `;
 
 const Button = styled.button`
@@ -60,8 +59,7 @@ const Button = styled.button`
 
 let theatreText = text;
 
-
-function Line(props) {  
+function Line() {  
 
 let currentLine = 0
 let quote = ""
@@ -87,6 +85,7 @@ function previous () {
                 <Button onClick={previous}>Previous</Button>
                 <Button onClick={next}>Next</Button>
             </ButtonTheatre>
+
             <ListStyle>
                 {/* Map - json file */}
                 {/* {
