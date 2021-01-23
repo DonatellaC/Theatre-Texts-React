@@ -57,53 +57,58 @@ const Button = styled.button`
 
 // **** END - Styled components ****
 
-let theatreText = text;
-
-function Line() {  
-
-let currentLine = 0
-let quote = ""
-
-function next () {
-    if(currentLine < theatreText.length) { 
-        quote = theatreText[currentLine++]  
-          console.log(quote)
+class Line extends React.Component {
+    constructor() {
+        super()
+        this.state = {
+        currentLine: 0,
+        quote : "",
+        texts :text
+        }
     }
-}
 
-function previous () {
-    if(currentLine  >= 0) { 
-        quote = theatreText[currentLine--]  
-     console.log(quote)
-    }
-}
+  // Functions buttons
+  next= () => {
+    this.setState({
+        currentLine: this.state.currentLine + 1,
+        quote : this.state.texts[this.state.currentLine] 
+    })
+  }
+
+  previous= () => {
+    this.setState({
+        currentLine: this.state.currentLine -1,
+        quote : this.state.texts[this.state.currentLine-2] 
+    })
+  }
 
 
+render() {
     return(
         <div>
             <ButtonTheatre>
-                <Button onClick={previous}>Previous</Button>
-                <Button onClick={next}>Next</Button>
+                <Button onClick={this.previous}>Previous</Button>
+                <Button onClick={this.next}>Next</Button>
             </ButtonTheatre>
 
             <ListStyle>
-                {/* Map - json file */}
-                {/* {
-                    theatreText.map((text, i) => {
-                        return(
-                            <div key={i}>
-                                <ListTheatre>{text}</ListTheatre>
-                            </div>
-                        )
-                    }
-                )} */}
+               
                 <div >
-                    <ListTheatre>{quote}</ListTheatre>
+                    <ListTheatre>{this.state.quote}</ListTheatre>   
                 </div>  
+
+                 {/* Map - json file */}
+                 {/* <div>
+                    {this.state.texts.map((text, index) => (
+                      <div key={index}>
+                        <ListTheatre>{text}</ListTheatre>
+                      </div>                    
+                    ))}
+                </div> */}
             </ListStyle>
         </div>
            )           
 }
-
+}
 
 export default Line;
