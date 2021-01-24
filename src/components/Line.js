@@ -67,6 +67,7 @@ class Line extends React.Component {
         }
     }
 
+
   // Functions buttons
   next= () => {
     this.setState({
@@ -89,12 +90,14 @@ render() {
             <ButtonTheatre>
                 <Button onClick={this.previous}>Previous</Button>
                 <Button onClick={this.next}>Next</Button>
+                
             </ButtonTheatre>
 
             <ListStyle>
                
                 <div >
-                    <ListTheatre>{this.state.quote}</ListTheatre>   
+                    <ListTheatre style={{color:this.state.textColor}}>{this.state.quote}</ListTheatre>   
+                   
                 </div>  
 
                  {/* Map - json file */}
