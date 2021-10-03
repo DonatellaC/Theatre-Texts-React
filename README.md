@@ -12,7 +12,7 @@ A website to learn theater texts
 - cd my-app
 - yarn start
 
-## 🔷 Technologies
+### 🔷 Technologies
 
 - HTML
 - CSS

@@ -61,11 +61,12 @@ const ButtonStyle = styled.button`
 `;
 
 const TextBackgound = styled.div`
-  background-color: #FF4500;
-  border: 1px solid white;
+  background-color: white;
+  color: red;
+  font-weight: bold;
+  transform: scale(1.1);
+  padding: 5px;
   border-radius: 5px;
-  padding: 10px;
-  font-size: 1.6rem;
 `;
 
 // **** END - Styled components ****
